@@ -4,6 +4,7 @@ import { Syne, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import PageTransition from "@/components/page-transition/PageTransition";
 
 export const syne = Syne({
   subsets: ["latin"],
@@ -22,10 +23,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} font-[300]`} suppressHydrationWarning>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body
+        className={`${poppins.className} font-[300]`}
+        suppressHydrationWarning
+      >
+        <PageTransition>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </PageTransition>
       </body>
     </html>
   );

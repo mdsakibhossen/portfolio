@@ -21,28 +21,18 @@ const Hero = () => {
   const isIconInView = useInView(iconContainerRef, { amount: 0.3, once: true });
   
   const animateHero = async () => {
-    console.log("isIconInView2:", isIconInView);
     await animate(
       imgRef.current,
       { scale: 1, opacity: 1 },
-      { delay: 0.5, type: "spring", stiffness: 400, damping: 30 }
+      { delay: 1.5, type: "spring", stiffness: 400, damping: 30 }
     );
-    // await animate(
-    //   textContainerRef.current.children[0],
-    //   { y: 0, opacity: 1 },
-    //   { type: "spring", stiffness: 300, damping: 20, ease: "easeIn" }
-    // );
-    // await animate(
-    //   textContainerRef.current.children[1],
-    //   { y: 0, opacity: 1 },
-    //   { type: "spring", stiffness: 300, damping: 20, ease: "easeIn" }
-    // );
+
    if (isTextInView) {
      await animate(
        Array.from(textContainerRef.current.children),
        { y: 0, opacity: 1 },
        {
-         delay: stagger(0.2),
+         delay: stagger(0.2,{startDelay: 0}),
          type: "spring",
          stiffness: 300,
          damping: 20,
@@ -57,7 +47,7 @@ const Hero = () => {
         Array.from(iconContainerRef.current.children),
         { scale: [0, 1], opacity: 1 },
         {
-          delay: stagger(0.15),
+          delay: stagger(0.15,{startDelay: 0}),
           type: "spring",
           stiffness: 700,
           damping: 15,
