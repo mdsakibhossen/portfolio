@@ -9,6 +9,8 @@ import {
   FaSquareGithub,
   FaSquareTwitter,
 } from "react-icons/fa6";
+import { SiCodewars } from "react-icons/si";
+
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -19,7 +21,7 @@ const Hero = () => {
 
   const isTextInView = useInView(textContainerRef, { amount: 0.3, once: true });
   const isIconInView = useInView(iconContainerRef, { amount: 0.3, once: true });
-  
+
   const animateHero = async () => {
     await animate(
       imgRef.current,
@@ -27,37 +29,36 @@ const Hero = () => {
       { delay: 1.5, type: "spring", stiffness: 400, damping: 30 }
     );
 
-   if (isTextInView) {
-     await animate(
-       Array.from(textContainerRef.current.children),
-       { y: 0, opacity: 1 },
-       {
-         delay: stagger(0.2,{startDelay: 0}),
-         type: "spring",
-         stiffness: 300,
-         damping: 20,
-         ease: "easeIn",
-       }
-     );
-   }
-   
-    
-     if (isIconInView) {
+    if (isTextInView) {
+      await animate(
+        Array.from(textContainerRef.current.children),
+        { y: 0, opacity: 1 },
+        {
+          delay: stagger(0.2, { startDelay: 0 }),
+          type: "spring",
+          stiffness: 300,
+          damping: 20,
+          ease: "easeIn",
+        }
+      );
+    }
+
+    if (isIconInView) {
       await animate(
         Array.from(iconContainerRef.current.children),
         { scale: [0, 1], opacity: 1 },
         {
-          delay: stagger(0.15,{startDelay: 0}),
+          delay: stagger(0.15, { startDelay: 0 }),
           type: "spring",
           stiffness: 700,
           damping: 15,
         }
       );
-     }
+    }
   };
   useEffect(() => {
     animateHero();
-  }, [isIconInView,isTextInView]);
+  }, [isIconInView, isTextInView]);
   return (
     <section
       ref={scope}
@@ -134,6 +135,19 @@ const Hero = () => {
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareGithub />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ scale: 1, opacity: 0 }}
+              whileHover={{ scale: 1.5 }}
+              whileTap={{ scale: 1.25 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Link
+                href={"/"}
+                className="transition-all duration-300 hover:scale-125"
+              >
+                <SiCodewars />
               </Link>
             </motion.div>
             <motion.div
