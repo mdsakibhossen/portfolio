@@ -40,7 +40,7 @@ const childVariants = {
   },
 };
 
-const SecHeader = ({ title = "", tag = "" }) => {
+const SecHeader = ({ title = "", tag = "",titleClass="" }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.35 });
   return (
@@ -62,7 +62,8 @@ const SecHeader = ({ title = "", tag = "" }) => {
       <div className="overflow-hidden">
         <motion.h2
           variants={charParentVariants}
-          className="text-2xl sm:text-3xl md:text-4xl font-medium"
+          className={`text-3xl md:text-4xl font-medium ${titleClass}`}
+
         >
           {title.split("").map((el, i) =>
             el != " " ? (
