@@ -16,7 +16,7 @@ import "./portfolio-card.css";
 import { Navigation } from "swiper/modules";
 
 const parentVariants = {
-  hidden: { y: "100%", opacity: 0 },
+  hidden: { y: 150, opacity: 0 },
   visible: {
     opacity: 1,
     y: 0,
@@ -31,7 +31,7 @@ const parentVariants = {
 };
 
 const childVariants = {
-  hidden: { opacity: 0, y: "100%" },
+  hidden: { opacity: 0, y: 150 },
   visible: {
     opacity: 1,
     y: 0,

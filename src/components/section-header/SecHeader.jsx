@@ -62,7 +62,7 @@ const SecHeader = ({ title = "", tag = "",titleClass="" }) => {
       <div className="overflow-hidden">
         <motion.h2
           variants={charParentVariants}
-          className={`text-3xl md:text-4xl font-medium ${titleClass}`}
+          className={`text-2xl sm:text-3xl md:text-4xl font-medium ${titleClass}`}
 
         >
           {title.split("").map((el, i) =>
