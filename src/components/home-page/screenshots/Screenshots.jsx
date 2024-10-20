@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Pic from "../../../../public/images/1.png";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import "./screenshots.css";
 
 const Screenshots = () => {
   const screenshots = [Pic, Pic, Pic, Pic, Pic, Pic];
@@ -21,31 +21,17 @@ const Screenshots = () => {
       } else {
         setBoxWidth(Math.floor((secWidth * 95) / 100));
       }
-      const width = screenshots.length * (boxWidth + gap);
 
+      const width = screenshots.length * (boxWidth + gap);
       setContainerWidth(width);
     }
   }, [screenshots.length, boxWidth, gap]);
 
-  // Infinite animation for the scrolling effect
-  const scrollAnimation = {
-    x: [-containerWidth, 0], // Move from right to left
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "loop",
-        ease: "linear",
-        duration: screenshots.length * 3, // Adjust speed as needed
-      },
-    },
-  };
-
   return (
     <section ref={ref} className="bg-slate-800 overflow-hidden">
-      <motion.div
-        className="flex"
+      <div
+        className="scrolling-container flex"
         style={{ width: containerWidth * 2, gap }}
-        animate={scrollAnimation}
       >
         {[...screenshots, ...screenshots].map((screenshot, i) => (
           <div key={i} className="box h-[400px]" style={{ minWidth: boxWidth }}>
@@ -59,7 +45,7 @@ const Screenshots = () => {
             />
           </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

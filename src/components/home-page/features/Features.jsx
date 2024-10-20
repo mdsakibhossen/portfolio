@@ -97,6 +97,7 @@ const Features = () => {
                 width={800}
                 height={600}
                 className="w-full h-full object-cover object-top"
+                priority
               />
             </motion.div>
             <motion.div variants={imgVariants} className="col-span-2">
@@ -106,6 +107,7 @@ const Features = () => {
                 width={800}
                 height={600}
                 className="w-full h-full object-cover object-top"
+                priority
               />
             </motion.div>
             <motion.div variants={imgVariants} className="col-span-2">
@@ -115,6 +117,7 @@ const Features = () => {
                 width={800}
                 height={600}
                 className="w-full h-full object-cover object-top"
+                priority
               />
             </motion.div>
           </motion.div>
