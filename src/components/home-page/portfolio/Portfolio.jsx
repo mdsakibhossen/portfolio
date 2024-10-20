@@ -38,7 +38,7 @@ const Portfolio = () => {
       <div className="overflow-hidden h-screen py-20 sticky top-0 px-3 gird items-center">
         <SecHeader title="Portfolio" tag="My Works" titleClass="text-white" />
         <motion.div
-          className="flex mt-10"
+          className="flex mt-10 relative"
           style={{ x, width: containerWidth, gap }}
         >
           {portfolios.map((portfolio, i) => (
