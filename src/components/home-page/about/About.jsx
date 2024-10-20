@@ -139,6 +139,7 @@
 
 import SecContainer from "@/components/sec-container/SecContainer";
 import MyPic from "../../../../public/images/my-pic.png";
+import { CgWebsite } from "react-icons/cg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -157,6 +158,7 @@ import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import SecHeader from "@/components/section-header/SecHeader";
+import CounterBox from "./counter-box/CounterBox";
 
 const About = () => {
   const images = [MyPic, MyPic, MyPic];
@@ -177,6 +179,23 @@ const About = () => {
     "Python (Basic)",
     "Django (Basic)",
     "MySQL",
+  ];
+  const countersInfo = [
+    {
+      id: 1,
+      icon: CgWebsite,
+      number: 30,
+      postFix: "+",
+      text: "Years of Experience",
+    },
+    {
+      id: 2,
+      icon: CgWebsite,
+      number: 30,
+      postFix: "+",
+      text: "Years of Experience",
+    },
+    { id: 3, icon: CgWebsite, number: 30, postFix: "+", text: "Years of Experience" },
   ];
 
   // Animation Variants
@@ -207,17 +226,19 @@ const About = () => {
       },
     },
   };
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const topRef = useRef(null);
+  const isTopSecInView = useInView(topRef);
+  const bottomRef = useRef(null);
+  const isBottomSecInView = useInView(bottomRef);
 
   return (
     <SecContainer className={"py-20 bg-secondary-50 overflow-hidden"}>
       <SecHeader title="Who I Am?" tag="About Me" />
       <motion.div
-        ref={ref}
+        ref={topRef}
         className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-20 lg:mt-10"
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        animate={isTopSecInView ? "visible" : "hidden"}
         variants={parentVariants}
       >
         {/* Image Slider Section */}
@@ -308,6 +329,24 @@ const About = () => {
             </Link>
           </motion.div>
         </div>
+      </motion.div>
+      <motion.div
+        ref={bottomRef}
+        className="grid grid-cols-1 lg:grid-cols-3 mt-10 border-2 border-secondary-100 max-w-[600px] lg:max-w-[1000px] mx-auto"
+        initial="hidden"
+        animate={isBottomSecInView ? "visible" : "hidden"}
+        variants={parentVariants}
+      >
+        {countersInfo.map((info, i) => (
+          <div
+            key={info.id}
+            className={`${
+              i !== 0 ? "border-t-2 lg:border-t-0 lg:border-l-2 " : ""
+            } border-secondary-100`}
+          >
+            <CounterBox counterInfo={info} />
+          </div>
+        ))}
       </motion.div>
     </SecContainer>
   );
