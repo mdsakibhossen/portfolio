@@ -199,9 +199,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0">
+      {/* <div className="absolute bottom-0 left-0">
         <Icons />
-      </div>
+      </div> */}
     </section>
   );
 };

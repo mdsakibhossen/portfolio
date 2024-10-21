@@ -9,12 +9,12 @@ import Services from "@/components/home-page/services/Services";
 const HomePage = () => {
   return (
     <>
-      <Hero />
-      <Services />
+      {/* <Hero /> */}
+      {/* <Services /> */}
       {/* <Portfolio /> */}
       {/* <About /> */}
-      {/* <Features /> */}
-      {/* <Screenshots /> */}
+      <Features />
+      <Screenshots />
     </>
   );
 };

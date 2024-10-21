@@ -75,7 +75,7 @@ const Features = () => {
 
   return (
     <>
-      <SecContainer className={"py-20 bg-primary-400 text-white relative"}>
+      <SecContainer className={"py-20 bg-primary-400 text-white"}>
         <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 lg:gap-20 lg:mt-10 overflow-hidden">
           {/* Image Slider Section */}
           <motion.div
@@ -181,13 +181,14 @@ const Features = () => {
             </motion.div>
           </motion.div>
         </div>
-
+      </SecContainer>
+      <SecContainer className={"bg-primary-600 text-white py-20 relative"}>
         <motion.div
-          initial={{ opacity: 0, scale: 0, translateY: "50%" }}
-          whileInView={{ opacity: 1, scale: 1, translateY: "50%" }}
+          initial={{ opacity: 0, scale: 0, translateY: "-50%" }}
+          whileInView={{ opacity: 1, scale: 1, translateY: "-50%" }}
           transition={{ type: "spring", stiffness: 300 }}
           viewport={{ amount: 0.3 }}
-          className="icon w-32 h-32 bg-secondary-400/80  text-white absolute bottom-0 left-8 flex justify-center items-center text-3xl z-10"
+          className="icon w-32 h-32 bg-secondary-400/80  text-white absolute top-0 left-8 flex justify-center items-center text-3xl z-10"
           style={{
             clipPath:
               "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
@@ -195,62 +196,63 @@ const Features = () => {
         >
           <LuGift />
         </motion.div>
-      </SecContainer>
-      <SecContainer
-        className={"bg-primary-600 text-white py-20  overflow-hidden"}
-      >
-        <motion.div
-          ref={bottomContentRef}
-          className="flex flex-col lg:flex-row justify-between gap-10 items-center"
-          initial="hidden"
-          animate={isBottomContentInView ? "visible" : "hidden"}
-          variants={parentVariants}
-        >
-          {" "}
-          <div className="space-y-4 max-w-[800px]">
-            {/* Link to Features Me Section */}
-            <motion.p
-              variants={childVariants}
-              className="text-secondary-400 uppercase text-sm tracking-[4px] font-semibold"
-            >
-              Get Started
-            </motion.p>
-            <motion.h2
-              variants={childVariants}
-              className="text-3xl md:text-4xl font-medium"
-            >
-              I Help Companies Move Faster
-            </motion.h2>
-            <motion.p variants={childVariants} className="text-slate-400">
-              Service range including technical skills, design, business
-              understanding. Service range including technical skills, design,
-              business understanding.Service range including technical skills,
-              design, business understanding.
-            </motion.p>
-            <motion.div
-              variants={childVariants}
-              whileHover={{
-                scale: 1.15,
-                originX: 0,
-                transformOrigin: "center",
-                transition: { type: "spring", stiffness: 300 },
-              }}
-              className="inline-block"
-            >
-              <Link
-                href={""}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"
+        <div className="overflow-hidden">
+          <motion.div
+            ref={bottomContentRef}
+            className="flex flex-col lg:flex-row justify-between gap-10 items-center"
+            initial="hidden"
+            animate={isBottomContentInView ? "visible" : "hidden"}
+            variants={parentVariants}
+          >
+            {" "}
+            <div className="space-y-4 max-w-[800px]">
+              {/* Link to Features Me Section */}
+              <motion.p
+                variants={childVariants}
+                className="text-secondary-400 uppercase text-sm tracking-[4px] font-semibold"
               >
-                Portfolios
-              </Link>
+                Get Started
+              </motion.p>
+              <motion.h2
+                variants={childVariants}
+                className="text-3xl md:text-4xl font-medium"
+              >
+                I Help Companies Move Faster
+              </motion.h2>
+              <motion.p variants={childVariants} className="text-slate-400">
+                Service range including technical skills, design, business
+                understanding. Service range including technical skills, design,
+                business understanding.Service range including technical skills,
+                design, business understanding.
+              </motion.p>
+              <motion.div
+                variants={childVariants}
+                whileHover={{
+                  scale: 1.15,
+                  originX: 0,
+                  transformOrigin: "center",
+                  transition: { type: "spring", stiffness: 300 },
+                }}
+                className="inline-block"
+              >
+                <Link
+                  href={""}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"
+                >
+                  Portfolios
+                </Link>
+              </motion.div>
+            </div>
+            <motion.div
+              className="max-w-[350px] w-full"
+              variants={childVariants}
+            >
+              <SVGImg />
             </motion.div>
-          </div>
-          <motion.div className="max-w-[350px] w-full" variants={childVariants}>
-            <SVGImg />
           </motion.div>
-        </motion.div>
+        </div>
       </SecContainer>
     </>
   );
