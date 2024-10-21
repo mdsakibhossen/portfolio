@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
       >
         <PageTransition>
-          <Header />
+          {/* <Header /> */}
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </PageTransition>
       </body>
     </html>

@@ -1,0 +1,25 @@
+
+.scrolling-container {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  cursor: pointer;
+}
+
+.box {
+  display: inline-block;
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves the icons by half the total width */
+  }
+}
+
+/* Pause the animation on hover */
+.scrolling-container:hover {
+  animation-play-state: paused;
+}

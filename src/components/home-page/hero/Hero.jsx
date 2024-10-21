@@ -12,6 +12,7 @@ import {
 import { SiCodewars } from "react-icons/si";
 
 import { useEffect, useRef } from "react";
+import Icons from "../icons/Icons";
 
 const Hero = () => {
   const [scope, animate] = useAnimate();
@@ -196,6 +197,10 @@ const Hero = () => {
             />
           </motion.div>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0">
+        <Icons />
       </div>
     </section>
   );
