@@ -75,10 +75,8 @@ const Features = () => {
 
   return (
     <>
-      <SecContainer
-        className={"py-20 bg-primary-400 text-white relative"}
-      >
-        <motion.div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 lg:gap-20 lg:mt-10 overflow-hidden">
+      <SecContainer className={"py-20 bg-primary-400 text-white relative"}>
+        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 lg:gap-20 lg:mt-10 overflow-hidden">
           {/* Image Slider Section */}
           <motion.div
             ref={imgRef}
@@ -162,8 +160,27 @@ const Features = () => {
                 </motion.li>
               ))}
             </ul>
+            <motion.div
+              variants={childVariants}
+              whileHover={{
+                scale: 1.15,
+                originX: 0,
+                transformOrigin: "center",
+                transition: { type: "spring", stiffness: 300 },
+              }}
+              className="inline-block"
+            >
+              <Link
+                href={""}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"
+              >
+                Hire Me
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0, translateY: "50%" }}
