@@ -1,4 +1,5 @@
 import About from "@/components/home-page/about/About";
+import Contact from "@/components/home-page/contact/Contact";
 import Features from "@/components/home-page/features/Features";
 import Hero from "@/components/home-page/hero/Hero";
 import Icons from "@/components/home-page/icons/Icons";
@@ -9,11 +10,12 @@ import Services from "@/components/home-page/services/Services";
 const HomePage = () => {
   return (
     <>
-      {/* <Hero /> */}
-      {/* <Services /> */}
-      {/* <Portfolio /> */}
-      {/* <About /> */}
+      <Hero />
+      <Services />
+      <Portfolio />
+      <About />
       <Features />
+      <Contact />
       <Screenshots />
     </>
   );
