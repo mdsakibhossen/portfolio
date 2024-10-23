@@ -1,10 +1,10 @@
-import Hero from "@/components/hero/Hero";
+import Hero from "@/components/hero/Hero"
 
-const AboutMePage = () => {
+const ContactPage = () => {
   return (
     <>
       <Hero
-        heading={"About Me"}
+        heading={"Contact Me"}
         text={
           "Agency provides a full service range including technical skills, design, business understanding."
         }
@@ -13,4 +13,4 @@ const AboutMePage = () => {
   );
 }
 
-export default AboutMePage
+export default ContactPage

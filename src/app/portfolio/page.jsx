@@ -1,16 +1,16 @@
 import Hero from "@/components/hero/Hero";
 
-const AboutMePage = () => {
+const PortfolioPage = () => {
   return (
     <>
       <Hero
-        heading={"About Me"}
+        heading={"Portfolio"}
         text={
           "Agency provides a full service range including technical skills, design, business understanding."
         }
       />
     </>
   );
-}
+};
 
-export default AboutMePage
+export default PortfolioPage;
