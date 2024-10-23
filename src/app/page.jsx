@@ -10,13 +10,13 @@ import Services from "@/components/home-page/services/Services";
 const HomePage = () => {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       {/* <Services /> */}
       {/* <Portfolio /> */}
-      {/* <About /> */}
+      <About />
       {/* <Features /> */}
       {/* <Contact /> */}
-      {/* <Screenshots /> */}
+      <Screenshots />
     </>
   );
 };

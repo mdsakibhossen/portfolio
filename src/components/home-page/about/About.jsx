@@ -95,8 +95,10 @@ const About = () => {
       },
     },
   };
-  const topRef = useRef(null);
-  const isTopSecInView = useInView(topRef);
+  const imgRef = useRef(null);
+  const isImgInView = useInView(imgRef);
+  const contentRef = useRef(null);
+  const isContentInView = useInView(contentRef, {amount: 0.3});
   const bottomRef = useRef(null);
   const isBottomSecInView = useInView(bottomRef);
 
@@ -104,14 +106,20 @@ const About = () => {
     <SecContainer className={"py-20 bg-secondary-50 overflow-hidden"}>
       <SecHeader title="Who I Am?" tag="About Me" />
       <motion.div
-        ref={topRef}
+        // ref={imgRef}
         className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-20 lg:mt-10"
-        initial="hidden"
-        animate={isTopSecInView ? "visible" : "hidden"}
-        variants={parentVariants}
+        // initial="hidden"
+        // animate={isImgInView ? "visible" : "hidden"}
+        // variants={parentVariants}
       >
         {/* Image Slider Section */}
-        <motion.div className="images" variants={childVariants}>
+        <motion.div
+          className="images"
+          ref={imgRef}
+          initial="hidden"
+          animate={isImgInView ? "visible" : "hidden"}
+          variants={parentVariants}
+        >
           <div className="max-w-[600px] w-[330px] sm:w-full h-[400px] sm:h-[450px] p-10">
             <Swiper
               effect={"cards"}
@@ -137,7 +145,13 @@ const About = () => {
         </motion.div>
 
         {/* Content Section */}
-        <div className="about-contents space-y-3">
+        <motion.div
+          ref={contentRef}
+          initial="hidden"
+          animate={isContentInView ? "visible" : "hidden"}
+          variants={parentVariants}
+          className="about-contents space-y-3"
+        >
           <motion.p
             variants={childVariants}
             className="text-secondary-400 uppercase text-sm tracking-[4px] font-semibold"
@@ -198,7 +212,7 @@ const About = () => {
               About Me
             </Link>
           </motion.div>
-        </div>
+        </motion.div>
       </motion.div>
       <motion.div
         ref={bottomRef}
