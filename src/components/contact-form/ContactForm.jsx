@@ -82,7 +82,10 @@ const ContactForm = () => {
       animate={isFormInView ? "visible" : "hidden"}
       className="w-full bg-white p-8 rounded-md shadow-md"
     >
-      <motion.h3 variants={childVariants} className="text-lg font-medium mb-3">
+      <motion.h3
+        variants={childVariants}
+        className="text-lg md:text-xl lg:text-2xl font-medium mb-3"
+      >
         Get In Touch
       </motion.h3>
       <div className="mb-3">
