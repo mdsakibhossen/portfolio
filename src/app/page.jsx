@@ -12,7 +12,7 @@ const HomePage = () => {
     <>
       <Hero />
       {/* <Services /> */}
-      {/* <Portfolio /> */}
+      <Portfolio />
       <About />
       {/* <Features /> */}
       {/* <Contact /> */}

@@ -14,6 +14,7 @@ import "./portfolio-card.css";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import { categories } from "@/lib/portfolios";
 
 const parentVariants = {
   hidden: { y: 150, opacity: 0 },
@@ -43,7 +44,8 @@ const childVariants = {
   },
 };
 const PortfolioCard = ({ portfolio }) => {
-  const { images, title, description, skills } = portfolio;
+  const { images, title, description, skills, category: catId } = portfolio;
+  const category = categories.find((item) => item.id === catId);
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
@@ -85,6 +87,12 @@ const PortfolioCard = ({ portfolio }) => {
 
         {/* Content */}
         <div className="content p-4">
+          {/* Category */}
+          <motion.div variants={childVariants}>
+            <p className=" bg-primary-50 text-primary-400 px-3 py-2 rounded inline-block my-3 group-hover:bg-secondary-50 group-hover:text-secondary-400 transition-all duration-300">
+              {category.title}
+            </p>
+          </motion.div>
           {/* Title */}
           <motion.h3
             variants={childVariants}

@@ -1,4 +1,5 @@
 import Hero from "@/components/hero/Hero";
+import Portfolio from "@/components/portfolio-page/portfolio/Portfolio";
 
 const PortfolioPage = () => {
   return (
@@ -9,6 +10,7 @@ const PortfolioPage = () => {
           "Agency provides a full service range including technical skills, design, business understanding."
         }
       />
+      <Portfolio />
     </>
   );
 };
