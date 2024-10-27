@@ -5,12 +5,14 @@ import SecContainer from "@/components/sec-container/SecContainer";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { categories, portfolios } from "@/lib/portfolios";
 import PortfolioCard from "@/components/portfolio-card/PortfolioCard";
+
 const parentVariants = {
   hidden: { y: 150, opacity: 0 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
+      delay: 1.25,
       staggerChildren: 0.1,
       when: "beforeChildren",
       type: "spring",
@@ -32,6 +34,14 @@ const childVariants = {
     },
   },
 };
+
+// Animation variants for the tab buttons
+const tabVariants = {
+  initial: { scale: 1 },
+  hover: { scale: 1.1 },
+  active: { scale: 1.1, transition: { duration: 0.2 } },
+};
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [activePortfolios, setActivePortfolios] = useState(portfolios);
@@ -47,13 +57,6 @@ const Portfolio = () => {
 
     setActivePortfolios(filtered);
   }, [activeCategory]);
-
-  // Animation variants for the tab buttons
-  const tabVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.1 },
-    active: { scale: 1.1, transition: { duration: 0.2 } },
-  };
 
   const catRef = useRef(null);
   const isCatInView = useInView(catRef, { amount: 0.2 });
@@ -114,7 +117,7 @@ const Portfolio = () => {
           <select
             value={activeCategory}
             onChange={(e) => setActiveCategory(e.target.value)}
-            className="block w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-primary-400"
+            className="block w-full border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-secondary-400"
           >
             <option value="all">All</option>
             {categories.map((category) => (

@@ -14,11 +14,11 @@ export const links = [
         href: "/portfolio",
         text: "Portfolio"
     },
-    {
-        id: 4,
-        href: "/services",
-        text: "Services"
-    },
+    // {
+    //     id: 4,
+    //     href: "/services",
+    //     text: "Services"
+    // },
     {
         id: 5,
         href: "/contact-me",

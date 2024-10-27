@@ -7,6 +7,19 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
+const imgVariants = {
+  hidden: { y: 150, opacity: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 2,
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+};
 const parentVariants = {
   hidden: { y: 150, opacity: 0 },
   visible: {
@@ -47,7 +60,7 @@ const AboutSec = () => {
           ref={imgRef}
           initial="hidden"
           animate={isImgInView ? "visible" : "hidden"}
-          variants={parentVariants}
+          variants={imgVariants}
           className="img-box max-w-[1000px] mx-auto h-[500px] bg-secondary-100 rounded"
         >
           <Image

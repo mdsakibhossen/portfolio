@@ -37,6 +37,7 @@ const Contact = () => {
       opacity: 1,
       y: 0,
       transition: {
+        delay: 1.5,
         staggerChildren: 0.1,
         when: "beforeChildren",
         type: "spring",
@@ -59,7 +60,7 @@ const Contact = () => {
     },
   };
   const contentRef = useRef(null);
-  const isContentInView = useInView(contentRef, { amount: 0.3 });
+  const isContentInView = useInView(contentRef, { amount: 0.2 });
 
   return (
     <SecContainer className={"py-20 bg-secondary-50"}>

@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
         className={`${poppins.className} font-[300]`}
         suppressHydrationWarning
       >
-        {/* <PageTransition> */}
+        <PageTransition>
           <Header />
           <main>{children}</main>
-          {/* <Footer /> */}
-        {/* </PageTransition> */}
+          <Footer />
+        </PageTransition>
       </body>
     </html>
   );

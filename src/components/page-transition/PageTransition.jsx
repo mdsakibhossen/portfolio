@@ -111,7 +111,7 @@ const PageTransition = ({ children }) => {
             >
               {/* Centered Page Name */}
               <motion.h1
-                className="text-white text-5xl lg:text-6xl font-semibold"
+                className="text-white text-5xl lg:text-6xl font-semibold uppercase"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}

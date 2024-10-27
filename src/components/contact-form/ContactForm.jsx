@@ -73,7 +73,7 @@ const ContactForm = () => {
         }
       );
   };
-  const isFormInView = useInView(formRef, { amount: 0.3 });
+  const isFormInView = useInView(formRef, { amount: 0.25 });
   return (
     <motion.div
       ref={ref}
