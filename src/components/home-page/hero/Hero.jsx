@@ -12,7 +12,7 @@ import {
 import { SiCodewars } from "react-icons/si";
 
 import { useEffect, useRef } from "react";
-import Icons from "../icons/Icons";
+// import Icons from "../icons/Icons";
 
 const Hero = () => {
   const [scope, animate] = useAnimate();
@@ -119,7 +119,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://www.linkedin.com/in/mdsakibhossen/"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaLinkedin />
@@ -132,7 +132,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://github.com/mdsakibhossen"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareGithub />
@@ -145,7 +145,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://www.codewars.com/users/mdsakibhossen"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <SiCodewars />
@@ -158,7 +158,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://x.com/mdsakibhossen01"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareTwitter />
@@ -171,7 +171,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://www.facebook.com/mdsakibhossen01/"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareFacebook />
