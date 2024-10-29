@@ -40,9 +40,9 @@ const childVariants = {
   },
 };
 
-const SecHeader = ({ title = "", tag = "",titleClass="" }) => {
+const SecHeader = ({ title = "", tag = "", titleClass = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.35 });
+  const isInView = useInView(ref, { amount: 0.35, once: true });
   return (
     <motion.div
       ref={ref}
@@ -63,7 +63,6 @@ const SecHeader = ({ title = "", tag = "",titleClass="" }) => {
         <motion.h2
           variants={charParentVariants}
           className={`text-2xl sm:text-3xl md:text-4xl font-medium ${titleClass}`}
-
         >
           {title.split("").map((el, i) =>
             el != " " ? (

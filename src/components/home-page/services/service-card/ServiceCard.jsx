@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+
 const parentVariants = {
   hidden: { y: "100%", opacity: 0 },
   visible: {
@@ -29,18 +30,20 @@ const childVariants = {
     },
   },
 };
+
 const ServiceCard = ({ service }) => {
   const { icon: ServiceIcon, title, description } = service;
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 });
+  const isInView = useInView(ref, { amount: 0.5, once: true });
   return (
-    <div ref={ref} className="overflow-hidden">
+    <div ref={ref} className="overflow-hidden h-full">
       <motion.div
         variants={parentVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
+        className="h-full"
       >
-        <div className="bg-white py-8 px-5 rounded shadow cursor-pointer group transition-all duration-300 relative z-[1] after:content-[''] after:w-[200px] after:h-[200px] after:bg-secondary-400/70 after:absolute after:bottom-0 after:right-0 after:rounded-full after:translate-x-[50%] after:translate-y-[50%] after:z-[-1] hover:after:w-[300%] hover:after:h-[300%] after:transition-all after:duration-500 overflow-hidden">
+        <div className="h-full bg-white py-8 px-5 rounded shadow cursor-pointer group transition-all duration-300 relative z-[1] after:content-[''] after:w-[200px] after:h-[200px] after:bg-secondary-400/70 after:absolute after:bottom-0 after:right-0 after:rounded-full after:translate-x-[50%] after:translate-y-[50%] after:z-[-1] hover:after:w-[300%] hover:after:h-[300%] after:transition-all after:duration-500 overflow-hidden">
           <motion.div variants={childVariants}>
             <div className="icon text-4xl w-16 h-16 bg-secondary-400/80 flex justify-center items-center rounded-full text-white border-2 border-secondary-400 mb-5 group-hover:bg-white group-hover:text-secondary-400 group-hover:border-white transition-all duration-300">
               <ServiceIcon />
