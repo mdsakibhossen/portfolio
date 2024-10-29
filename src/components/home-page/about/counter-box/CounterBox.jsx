@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 const parentVariants = {
   hidden: { y: "100%", opacity: 0 },
   visible: {
@@ -28,10 +29,19 @@ const childVariants = {
     },
   },
 };
+
 const CounterBox = ({ counterInfo }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2, once: true });
   const { icon: Icon, number, postFix, text } = counterInfo;
   return (
-    <div className="counter-card flex gap-4 items-center p-4">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={parentVariants}
+      className="counter-card flex gap-4 items-center p-4"
+    >
       <motion.div variants={childVariants}>
         <div className="icon text-4xl w-16 h-16 bg-secondary-400/80 flex justify-center items-center rounded-full text-white border-2 border-secondary-400">
           <Icon />
@@ -44,7 +54,7 @@ const CounterBox = ({ counterInfo }) => {
         </motion.h3>
         <motion.p variants={childVariants}>{text}</motion.p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
