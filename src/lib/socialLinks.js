@@ -1,27 +1,27 @@
 export const socialLinks = [
     {
         id: 1,
-        href: "/",
+        href: "https://www.linkedin.com/in/mdsakibhossen/",
         text: "LinkedIn"
     },
     {
         id: 2,
-        href: "/about-me",
+        href: "https://x.com/mdsakibhossen01",
         text: "Twitter"
     },
     {
         id: 3,
-        href: "/portfolio",
+        href: "https://www.facebook.com/mdsakibhossen01",
         text: "Facebook"
     },
     {
         id: 4,
-        href: "/services",
+        href: "https://www.instagram.com/mdsakibhossen01",
         text: "Instagram"
     },
-    {
-        id: 5,
-        href: "/contact-me",
-        text: "Whatsapp"
-    },
+    // {
+    //     id: 5,
+    //     href: "https://web.whatsapp.com//contact-me",
+    //     text: "Whatsapp"
+    // },
 ]

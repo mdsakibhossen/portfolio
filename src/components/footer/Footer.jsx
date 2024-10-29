@@ -55,10 +55,10 @@ const Footer = () => {
   const box4Ref = useRef(null);
   // const iconContainerRef = useRef(null);
 
-  const box1IsInView = useInView(box1Ref, { amount: 0.35 });
-  const box2IsInView = useInView(box2Ref, { amount: 0.35 });
-  const box3IsInView = useInView(box3Ref, { amount: 0.35 });
-  const box4IsInView = useInView(box4Ref, { amount: 0.35 });
+  const box1IsInView = useInView(box1Ref, { amount: 0.35, once: true });
+  const box2IsInView = useInView(box2Ref, { amount: 0.35, once: true });
+  const box3IsInView = useInView(box3Ref, { amount: 0.35, once: true });
+  const box4IsInView = useInView(box4Ref, { amount: 0.35, once: true });
   // const isIconInView = useInView(iconContainerRef, { amount: 0.3, once: true });
 
   return (
@@ -95,9 +95,11 @@ const Footer = () => {
             </span>
           </motion.div>
           <motion.p variants={upVariants} className="mt-5 text-slate-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            dolorem repellat excepturi facilis minus vero architecto obcaecati
-            pariatur voluptates natus.
+            Passionate Full Stack Web Developer dedicated to creating responsive
+            and user-friendly web applications. I transform ideas
+            into functional digital solutions. Always eager to learn and grow, I
+            aim to deliver high-quality, efficient code while enhancing user
+            experiences. Connect to bring your web projects to life!
           </motion.p>
           <div
             // ref={iconContainerRef}
@@ -110,7 +112,7 @@ const Footer = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://www.linkedin.com/in/mdsakibhossen"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaLinkedin />
@@ -123,25 +125,12 @@ const Footer = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://github.com/mdsakibhossen"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareGithub />
               </Link>
             </motion.div>
-            {/* <motion.div
-              variants={scaleVariants}
-              whileHover={{ scale: 1.5 }}
-              whileTap={{ scale: 1.25 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <Link
-                href={"/"}
-                className="transition-all duration-300 hover:scale-125"
-              >
-                <FaSquareTwitter />
-              </Link>
-            </motion.div> */}
             <motion.div
               variants={scaleVariants}
               whileHover={{ scale: 1.5 }}
@@ -149,7 +138,20 @@ const Footer = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://x.com/mdsakibhossen01"}
+                className="transition-all duration-300 hover:scale-125"
+              >
+                <FaSquareTwitter />
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={scaleVariants}
+              whileHover={{ scale: 1.5 }}
+              whileTap={{ scale: 1.25 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Link
+                href={"https://www.facebook.com/mdsakibhossen01"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareFacebook />
@@ -163,7 +165,7 @@ const Footer = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"/"}
+                href={"https://www.codewars.com/users/mdsakibhossen"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <SiCodewars />
@@ -259,7 +261,7 @@ const Footer = () => {
       </div>
       <div className="bottom container mx-auto px-3 text-center text-slate-400 pt-10 border-t border-t-slate-600">
         <motion.p variants={upVariants} initial="hidden" whileInView="visible">
-          Copyright &copy; 2022{" "}
+          Copyright &copy; 2024{" "}
           <span className="text-slate-200 font-medium">
             Md <span className="text-secondary-400">Sakib</span>
           </span>

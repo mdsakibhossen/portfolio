@@ -119,7 +119,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"https://www.linkedin.com/in/mdsakibhossen/"}
+                href={"https://www.linkedin.com/in/mdsakibhossen"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaLinkedin />
@@ -171,7 +171,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                href={"https://www.facebook.com/mdsakibhossen01/"}
+                href={"https://www.facebook.com/mdsakibhossen01"}
                 className="transition-all duration-300 hover:scale-125"
               >
                 <FaSquareFacebook />
