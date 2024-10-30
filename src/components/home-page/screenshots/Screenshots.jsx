@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
-import Pic from "../../../../public/images/1.png";
+// import Pic from "../../../../public/images/1.png";
 import { useEffect, useRef, useState } from "react";
 import "./screenshots.css";
+import Link from "next/link";
+import { screenshots } from "@/lib/screenshots";
 
 const Screenshots = () => {
-  const screenshots = [Pic, Pic, Pic, Pic, Pic, Pic];
+  // const screenshots = [Pic, Pic, Pic, Pic, Pic, Pic];
   const [boxWidth, setBoxWidth] = useState(330);
   const gap = 0;
   const [containerWidth, setContainerWidth] = useState(0);
@@ -31,18 +33,24 @@ const Screenshots = () => {
     <section ref={ref} className="bg-slate-800 overflow-hidden">
       <div
         className="scrolling-container flex"
-        style={{ width: containerWidth * 2, gap }}
+        style={{
+          width: containerWidth * 2,
+          gap,
+          animationDuration: `${screenshots.length * 5}s`,
+        }}
       >
         {[...screenshots, ...screenshots].map((screenshot, i) => (
           <div key={i} className="box h-[400px]" style={{ minWidth: boxWidth }}>
-            <Image
-              src={screenshot}
-              alt="ScreenShots"
-              width={1500}
-              height={500}
-              className="w-full h-full object-cover object-top"
-              priority
-            />
+            <Link href={screenshot.href} target="_blank">
+              <Image
+                src={screenshot.src}
+                alt="ScreenShots"
+                width={1500}
+                height={500}
+                className="w-full h-full object-cover object-top"
+                priority
+              />
+            </Link>
           </div>
         ))}
       </div>
