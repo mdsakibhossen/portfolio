@@ -96,9 +96,9 @@ const Footer = () => {
           </motion.div>
           <motion.p variants={upVariants} className="mt-5 text-slate-300">
             Passionate Full Stack Web Developer dedicated to creating responsive
-            and user-friendly web applications. I transform ideas
-            into functional digital solutions. Always eager to learn and grow, I
-            aim to deliver high-quality, efficient code while enhancing user
+            and user-friendly web applications. I transform ideas into
+            functional digital solutions. Always eager to learn and grow, I aim
+            to deliver high-quality, efficient code while enhancing user
             experiences. Connect to bring your web projects to life!
           </motion.p>
           <div
@@ -260,7 +260,12 @@ const Footer = () => {
         </motion.div>
       </div>
       <div className="bottom container mx-auto px-3 text-center text-slate-400 pt-10 border-t border-t-slate-600">
-        <motion.p variants={upVariants} initial="hidden" whileInView="visible">
+        <motion.p
+          variants={upVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Copyright &copy; 2024{" "}
           <span className="text-slate-200 font-medium">
             Md <span className="text-secondary-400">Sakib</span>
