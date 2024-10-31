@@ -30,7 +30,7 @@ const childVariants = {
 };
 const Hero = ({ heading, text }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.35 });
+  const isInView = useInView(ref, { amount: 0.35, once: true });
   return (
     <SecContainer className={"bg-primary-400 py-20 lg:py-40 text-center"}>
       <div ref={ref} className="overflow-hidden">
