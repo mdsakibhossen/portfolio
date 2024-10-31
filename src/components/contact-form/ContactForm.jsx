@@ -73,7 +73,7 @@ const ContactForm = () => {
         }
       );
   };
-  const isFormInView = useInView(formRef, { amount: 0.25 });
+  const isFormInView = useInView(formRef, { amount: 0.25, once: true });
   return (
     <motion.div
       ref={ref}
@@ -149,7 +149,11 @@ const ContactForm = () => {
           <motion.button
             variants={childVariants}
             type="submit"
-            className="bg-secondary-400 text-white px-6 py-3 rounded hover:bg-secondary-400"
+            whileHover={{
+              scale: 1.15,
+              transition: { type: "spring", stiffness: 300 },
+            }}
+            className="bg-secondary-400 text-white px-6 py-3 rounded"
           >
             Send Message
           </motion.button>

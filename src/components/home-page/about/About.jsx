@@ -119,7 +119,7 @@ const About = () => {
           >
             Professional Web Developer
           </motion.h2>
-          <motion.p variants={childVariants}>
+          <motion.p variants={childVariants} className=" leading-7 tracking-wide">
             I&apos;m a dedicated Full Stack Web Developer with a passion for
             creating efficient, responsive, and user-friendly digital solutions.
             With expertise in both frontend and backend development, I
