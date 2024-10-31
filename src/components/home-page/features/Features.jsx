@@ -1,7 +1,9 @@
 "use client";
 
 import SecContainer from "@/components/sec-container/SecContainer";
-import FeaturePic from "../../../../public/images/1.png";
+import FeaturePic1 from "../../../../public/images/1.png";
+import FeaturePic2 from "../../../../public/images/2.png";
+import FeaturePic3 from "../../../../public/images/3.png";
 import { GiCheckMark } from "react-icons/gi";
 import { LuGift } from "react-icons/lu";
 
@@ -11,18 +13,17 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
-import SecHeader from "@/components/section-header/SecHeader";
 import SVGImg from "./svg-img/SVGImg";
 
 const Features = () => {
   const features = [
-    "Range including technical skills",
-    "Range including technical skills",
-    "Range including technical skills",
-    "Range including technical skills",
-    "Range including technical skills",
-    "Range including technical skills",
-    "Range including technical skills",
+    "Full-stack development with modern frameworks",
+    "Responsive and mobile-first design",
+    "User-friendly and interactive UI/UX design",
+    "API integration and data management",
+    "SEO optimization and performance enhancement",
+    "Custom animations using GSAP and Framer Motion",
+    "Cross-browser compatibility and accessibility",
   ];
   // Animation Variants
   const parentVariants = {
@@ -70,13 +71,13 @@ const Features = () => {
   const bottomContentRef = useRef(null);
   const isBottomContentInView = useInView(bottomContentRef, {
     amount: 0.3,
-    // once: true,
+    once: true,
   });
 
   return (
     <>
       <SecContainer className={"py-20 bg-primary-400 text-white"}>
-        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 lg:gap-20 lg:mt-10 overflow-hidden">
+        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 lg:gap-20 overflow-hidden">
           {/* Image Slider Section */}
           <motion.div
             ref={imgRef}
@@ -90,7 +91,7 @@ const Features = () => {
               className="col-span-4 xl:row-span-2 xl:col-span-2"
             >
               <Image
-                src={FeaturePic}
+                src={FeaturePic1}
                 alt="My Pic"
                 width={800}
                 height={600}
@@ -100,7 +101,7 @@ const Features = () => {
             </motion.div>
             <motion.div variants={imgVariants} className="col-span-2">
               <Image
-                src={FeaturePic}
+                src={FeaturePic2}
                 alt="My Pic"
                 width={800}
                 height={600}
@@ -110,7 +111,7 @@ const Features = () => {
             </motion.div>
             <motion.div variants={imgVariants} className="col-span-2">
               <Image
-                src={FeaturePic}
+                src={FeaturePic3}
                 alt="My Pic"
                 width={800}
                 height={600}
@@ -140,11 +141,16 @@ const Features = () => {
             >
               Give Your Site A New Look
             </motion.h2>
-            <motion.p variants={childVariants} className="text-slate-300">
-              Service range including technical skills, design, business
-              understanding. Service range including technical skills, design,
-              business understanding.Service range including technical skills,
-              design, business understanding.
+            <motion.p
+              variants={childVariants}
+              className="text-slate-300 leading-7"
+            >
+              Transform your website with a fresh, modern design that combines
+              technical expertise, creative design, and a deep understanding of
+              user needs. From responsive layouts to interactive elements, I
+              provide comprehensive services to give your site a polished,
+              professional look that enhances user engagement and supports your
+              business goals.
             </motion.p>
             <ul className="text-slate-400 flex flex-col gap-3">
               {features.map((feature, i) => (
@@ -160,7 +166,8 @@ const Features = () => {
                 </motion.li>
               ))}
             </ul>
-            <motion.div
+
+            {/* <motion.div
               variants={childVariants}
               whileHover={{
                 scale: 1.15,
@@ -171,14 +178,14 @@ const Features = () => {
               className="inline-block"
             >
               <Link
-                href={""}
+                href={"https://www.linkedin.com/in/mdsakibhossen/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"
               >
                 Hire Me
               </Link>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </SecContainer>
@@ -187,7 +194,7 @@ const Features = () => {
           initial={{ opacity: 0, scale: 0, translateY: "-50%" }}
           whileInView={{ opacity: 1, scale: 1, translateY: "-50%" }}
           transition={{ type: "spring", stiffness: 300 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{ amount: 0.3, once: true }}
           className="icon w-32 h-32 bg-secondary-400/80  text-white absolute top-0 left-8 flex justify-center items-center text-3xl z-10"
           style={{
             clipPath:
@@ -219,11 +226,16 @@ const Features = () => {
               >
                 I Help Companies Move Faster
               </motion.h2>
-              <motion.p variants={childVariants} className="text-slate-400">
-                Service range including technical skills, design, business
-                understanding. Service range including technical skills, design,
-                business understanding.Service range including technical skills,
-                design, business understanding.
+              <motion.p
+                variants={childVariants}
+                className="text-slate-400 leading-7"
+              >
+                I help companies achieve their goals faster by crafting
+                high-quality web solutions that combine technical expertise,
+                interactive design, and deep user focus. With a commitment to
+                clean code and efficient functionality, I provide full-stack
+                services that drive results, streamline processes, and elevate
+                digital experiences.
               </motion.p>
               <motion.div
                 variants={childVariants}
@@ -236,7 +248,7 @@ const Features = () => {
                 className="inline-block"
               >
                 <Link
-                  href={""}
+                  href={"/portfolio"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"

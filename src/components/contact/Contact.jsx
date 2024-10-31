@@ -94,25 +94,7 @@ const Contact = () => {
               </motion.li>
             ))}
           </ul>
-          <motion.div
-            variants={childVariants}
-            whileHover={{
-              scale: 1.15,
-              originX: 0,
-              transformOrigin: "center",
-              transition: { type: "spring", stiffness: 300 },
-            }}
-            className="inline-block"
-          >
-            <Link
-              href={"https://www.linkedin.com/in/mdsakibhossen/"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"
-            >
-              Hire Me
-            </Link>
-          </motion.div>
+          
         </motion.div>
       </div>
     </SecContainer>
