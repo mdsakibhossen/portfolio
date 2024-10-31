@@ -2,7 +2,7 @@
 
 import SecContainer from "@/components/sec-container/SecContainer";
 import Image from "next/image";
-import MyPic from "../../../../public/images/my-pic.png";
+import MyPic from "../../../../public/images/about-0.png";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
@@ -50,9 +50,9 @@ const childVariants = {
 
 const AboutSec = () => {
   const imgRef = useRef(null);
-  const isImgInView = useInView(imgRef);
+  const isImgInView = useInView(imgRef, { once: true });
   const contentRef = useRef(null);
-  const isContentInView = useInView(contentRef);
+  const isContentInView = useInView(contentRef, { once: true });
   return (
     <SecContainer className={"py-20 bg-secondary-50 overflow-hidden"}>
       <div className="max-w-[1000px] mx-auto">
@@ -93,16 +93,23 @@ const AboutSec = () => {
             Professional Web Designer
           </motion.h2>
           <motion.p variants={childVariants}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero
-            sint dignissimos minus animi sunt architecto possimus dolorem ipsam
-            aspernatur in libero culpa, dolores officiis repellendus atque
-            beatae perspiciatis vel.
+            I am a Full Stack Web Developer with a passion for creating dynamic
+            and engaging digital experiences. Specializing in both frontend and
+            backend development, I work with technologies like Next.js, React,
+            MongoDB, and animation libraries such as GSAP and Framer Motion.
+            With a focus on clean code and responsive design, I strive to
+            deliver solutions that are both visually appealing and highly
+            functional, whether for e-commerce platforms, blogs, or business
+            websites.
           </motion.p>
           <motion.p variants={childVariants}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque vero
-            sint dignissimos minus animi sunt architecto possimus dolorem ipsam
-            aspernatur in libero culpa, dolores officiis repellendus atque
-            beatae perspiciatis vel.
+            Through years of self-driven learning and hands-on projects, I have
+            developed a deep understanding of the complete web development
+            process. My approach combines creativity with technical skill,
+            always aiming to provide user-centric experiences that support
+            business growth and client satisfaction. I'm dedicated to helping
+            clients bring their ideas to life with high-quality, customized web
+            solutions.
           </motion.p>
 
           {/* Link to Resume Section */}
@@ -117,7 +124,7 @@ const AboutSec = () => {
             className="inline-block"
           >
             <Link
-              href={""}
+              href={"/files/resume.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105 mt-5"
