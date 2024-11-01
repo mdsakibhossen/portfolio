@@ -71,7 +71,7 @@ const About = () => {
           animate={isImgInView ? "visible" : "hidden"}
           variants={parentVariants}
         >
-          <div className="max-w-[600px] w-[80%] sm:w-full mx-auto h-[450px] sm:h-[550px]  p-10">
+          <div className="max-w-[600px] w-[75%] sm:w-full mx-auto h-[450px] sm:h-[550px]  p-10">
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -80,7 +80,7 @@ const About = () => {
               //   delay: 5000,
               //   disableOnInteraction: false,
               // }}
-              className="mySwiper"
+              className="mySwiper w-full"
             >
               {images.map((image, i) => (
                 <div key={i} className="max-w-[600] mx-auto">
@@ -148,7 +148,7 @@ const About = () => {
                 <motion.span
                   variants={childVariants}
                   key={index}
-                  className="px-3 py-1.5 text-xs font-medium bg-secondary-100 text-secondary-500 rounded shadow"
+                  className="px-3 py-1.5 text-xs font-medium bg-secondary-100 text-secondary-500 rounded shadow whitespace-nowrap"
                 >
                   {tech}
                 </motion.span>
