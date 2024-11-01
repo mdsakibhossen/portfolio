@@ -1,6 +1,11 @@
 import AboutSec from "@/components/about-page/about-sec/AboutSec";
 import Hero from "@/components/hero/Hero";
 
+export const metadata = {
+  title: "About Me | Md Sakib Hossen",
+  description: "I am a Full Stack Web Developer",
+};
+
 const AboutMePage = () => {
   return (
     <>

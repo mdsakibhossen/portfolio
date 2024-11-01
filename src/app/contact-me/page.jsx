@@ -2,6 +2,11 @@ import Map from "@/components/contact-page/map/Map";
 import Contact from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 
+export const metadata = {
+  title: "Contact Me | Md Sakib Hossen",
+  description: "I am a Full Stack Web Developer",
+};
+
 const ContactPage = () => {
   return (
     <>
