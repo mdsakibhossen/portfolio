@@ -107,9 +107,9 @@ const AboutSec = () => {
             developed a deep understanding of the complete web development
             process. My approach combines creativity with technical skill,
             always aiming to provide user-centric experiences that support
-            business growth and client satisfaction. I'm dedicated to helping
-            clients bring their ideas to life with high-quality, customized web
-            solutions.
+            business growth and client satisfaction. I&apos;m dedicated to
+            helping clients bring their ideas to life with high-quality,
+            customized web solutions.
           </motion.p>
 
           {/* Link to Resume Section */}
