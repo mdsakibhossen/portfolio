@@ -65,13 +65,13 @@ const About = () => {
       <motion.div className="flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-20 lg:mt-10">
         {/* Image Slider Section */}
         <motion.div
-          className="images xl:flex-[2]"
+          className="images xl:flex-[2] w-full"
           ref={imgRef}
           initial="hidden"
           animate={isImgInView ? "visible" : "hidden"}
           variants={parentVariants}
         >
-          <div className="max-w-[600px] w-[70%] mx-auto sm:w-full h-[450px] sm:h-[550px]  p-10">
+          <div className="max-w-[600px] w-[80%] sm:w-full mx-auto h-[450px] sm:h-[550px]  p-10">
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -105,7 +105,7 @@ const About = () => {
           initial="hidden"
           animate={isContentInView ? "visible" : "hidden"}
           variants={parentVariants}
-          className="about-contents xl:flex-[3] space-y-3"
+          className="about-contents xl:flex-[3] space-y-3 w-full"
         >
           <motion.p
             variants={childVariants}
@@ -119,7 +119,10 @@ const About = () => {
           >
             Professional Web Developer
           </motion.h2>
-          <motion.p variants={childVariants} className=" leading-7 tracking-wide">
+          <motion.p
+            variants={childVariants}
+            className=" leading-7 tracking-wide"
+          >
             I&apos;m a dedicated Full Stack Web Developer with a passion for
             creating efficient, responsive, and user-friendly digital solutions.
             With expertise in both frontend and backend development, I
