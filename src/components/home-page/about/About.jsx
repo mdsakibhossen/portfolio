@@ -65,7 +65,7 @@ const About = () => {
       <motion.div className="flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-20 lg:mt-10">
         {/* Image Slider Section */}
         <motion.div
-          className="images"
+          className="images xl:flex-[2]"
           ref={imgRef}
           initial="hidden"
           animate={isImgInView ? "visible" : "hidden"}
@@ -105,7 +105,7 @@ const About = () => {
           initial="hidden"
           animate={isContentInView ? "visible" : "hidden"}
           variants={parentVariants}
-          className="about-contents space-y-3"
+          className="about-contents xl:flex-[3] space-y-3"
         >
           <motion.p
             variants={childVariants}
@@ -145,7 +145,7 @@ const About = () => {
                 <motion.span
                   variants={childVariants}
                   key={index}
-                  className="inline-block px-3 py-1.5 text-xs font-medium bg-secondary-100 text-secondary-500 rounded shadow"
+                  className="px-3 py-1.5 text-xs font-medium bg-secondary-100 text-secondary-500 rounded shadow"
                 >
                   {tech}
                 </motion.span>
