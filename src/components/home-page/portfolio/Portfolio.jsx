@@ -35,13 +35,13 @@ const Portfolio = () => {
       className={`bg-slate-800`}
       style={{ height: `${speed * 100}vh` }}
     >
-      <div className="overflow-hidden h-screen py-20 sticky top-0 px-3 gird items-center">
-        <SecHeader title="Portfolio" tag="My Works" titleClass="text-white" />
+      <div className="overflow-hidden min-h-screen py-20 sticky top-0 px-3 gird items-center">
+        <SecHeader title="What I Have Done" tag="My Works" titleClass="text-white" />
         <motion.div
           className="flex mt-10 relative"
           style={{ x, width: containerWidth, gap }}
         >
-          {portfolios.map((portfolio, i) => (
+          {portfolios.slice(0,10).map((portfolio, i) => (
             <div
               key={i}
               className="box h-[400px]"

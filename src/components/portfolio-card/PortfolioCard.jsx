@@ -44,10 +44,18 @@ const childVariants = {
   },
 };
 const PortfolioCard = ({ portfolio }) => {
-  const { images, title, description, skills, category: catId } = portfolio;
+  const {
+    images,
+    title,
+    description,
+    skills,
+    category: catId,
+    liveLink,
+    sourceCodeLink,
+  } = portfolio;
   const category = categories.find((item) => item.id === catId);
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   return (
     <motion.div
       ref={ref}
@@ -56,34 +64,49 @@ const PortfolioCard = ({ portfolio }) => {
       animate={isInView ? "visible" : "hidden"}
       // className="overflow-hidden"
     >
-      <div className="portfolio-card w-full h-auto group rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-2xl duration-500 bg-white">
+      <div className="portfolio-card w-full h-auto group rounded-md overflow-hidden shadow-lg transition-all hover:shadow-2xl duration-500 bg-white">
         {/* Image container */}
 
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          navigation={true}
-          modules={[Navigation]}
-          className="mySwiper"
-        >
-          {images.map((image, i) => (
-            <SwiperSlide key={i}>
-              <div className="img-box w-full h-[300px] relative overflow-hidden">
-                <Link href={""}>
-                  <Image
-                    src={image}
-                    alt={title}
-                    width={1000}
-                    height={600}
-                    className="absolute top-0 left-0 h-auto min-h-full w-full object-top transition-transform duration-1000 ease-in-out group-hover:translate-y-[calc(-100%_+_300px)]"
-                    priority
-                  />
-                </Link>{" "}
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {images.length > 1 ? (
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            navigation={true}
+            modules={[Navigation]}
+            className="mySwiper"
+          >
+            {images.map((image, i) => (
+              <SwiperSlide key={i}>
+                <div className="img-box w-full h-[250px] md:h-[300px] relative overflow-hidden">
+                  <Link href={liveLink} target="_blank">
+                    <Image
+                      src={image}
+                      alt={title}
+                      width={1000}
+                      height={600}
+                      className="absolute top-0 left-0 h-auto min-h-full w-full object-top transition-transform duration-[2s] ease-in-out group-hover:translate-y-[calc(-100%_+_300px)]"
+                      priority
+                    />
+                  </Link>{" "}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div className="img-box w-full h-[250px] md:h-[300px] relative overflow-hidden">
+            <Link href={liveLink} target="_blank">
+              <Image
+                src={images[0]}
+                alt={title}
+                width={1000}
+                height={600}
+                className="absolute top-0 left-0 h-auto min-h-full w-full object-top transition-transform duration-[2s] ease-in-out group-hover:translate-y-[calc(-100%_+_300px)]"
+                priority
+              />
+            </Link>{" "}
+          </div>
+        )}
 
         {/* Content */}
         <div className="content p-4">
@@ -133,7 +156,7 @@ const PortfolioCard = ({ portfolio }) => {
               }}
             >
               <Link
-                href={""}
+                href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-5 py-2 text-sm font-semibold bg-primary-400 text-white rounded-full shadow-lg hover:bg-primary-500 transition-all duration-300 transform hover:scale-105"
@@ -151,7 +174,7 @@ const PortfolioCard = ({ portfolio }) => {
               }}
             >
               <Link
-                href={""}
+                href={sourceCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-5 py-2 text-sm font-semibold bg-secondary-400 text-white rounded-full shadow-lg hover:bg-secondary-500 transition-all duration-300 transform hover:scale-105"

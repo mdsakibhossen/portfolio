@@ -90,7 +90,7 @@ const AboutSec = () => {
             variants={childVariants}
             className="text-3xl md:text-4xl font-medium"
           >
-            Professional Web Designer
+            Professional Web Developer
           </motion.h2>
           <motion.p variants={childVariants}>
             I am a Full Stack Web Developer with a passion for creating dynamic

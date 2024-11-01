@@ -61,7 +61,7 @@ const About = () => {
 
   return (
     <SecContainer className={"py-20 bg-secondary-50 overflow-hidden"}>
-      <SecHeader title="Who I Am?" tag="About Me" />
+      <SecHeader title="Who I Am" tag="About Me" />
       <motion.div className="flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-20 lg:mt-10">
         {/* Image Slider Section */}
         <motion.div
