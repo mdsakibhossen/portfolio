@@ -13,7 +13,7 @@ const ContactPage = () => {
       <Hero
         heading={"Contact Me"}
         text={
-          "Agency provides a full service range including technical skills, design, business understanding."
+          "Have a project in mind? Let’s connect and discuss how I can help bring your ideas to life through custom web solutions."
         }
       />
       <Contact />

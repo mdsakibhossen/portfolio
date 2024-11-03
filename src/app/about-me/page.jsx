@@ -12,7 +12,7 @@ const AboutMePage = () => {
       <Hero
         heading={"About Me"}
         text={
-          "Agency provides a full service range including technical skills, design, business understanding."
+          "I'm a full-stack developer dedicated to crafting unique and efficient digital solutions with a focus on clean code and user-centric design."
         }
       />
       <AboutSec />

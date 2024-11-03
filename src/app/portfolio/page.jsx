@@ -12,7 +12,7 @@ const PortfolioPage = () => {
       <Hero
         heading={"Portfolio"}
         text={
-          "Agency provides a full service range including technical skills, design, business understanding."
+          "Explore my collection of web projects showcasing diverse skills, from responsive design to seamless functionality and interactive features."
         }
       />
       <Portfolio />
