@@ -71,7 +71,7 @@ const About = () => {
           animate={isImgInView ? "visible" : "hidden"}
           variants={parentVariants}
         >
-          <div className="max-w-[600px] w-[75%] sm:w-full mx-auto h-[450px] sm:h-[550px]  p-10">
+          <div className="max-w-[600px] w-full mx-auto h-[450px] sm:h-[550px]  p-10">
             <Swiper
               effect={"cards"}
               grabCursor={true}
