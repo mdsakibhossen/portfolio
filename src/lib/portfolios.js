@@ -11,6 +11,11 @@ import CarServicing from "../../public/images/screen-5.jpeg"
 import PricingCards from "../../public/images/screen-6.jpeg"
 import DigitalClock from "../../public/images/screen-7.jpeg"
 import ImgGallery from "../../public/images/screen-11.jpeg"
+import EShop1 from "../../public/images/e-shop-1.png"
+import EShop2 from "../../public/images/e-shop-2.png"
+import EShop3 from "../../public/images/e-shop-3.png"
+import EShop4 from "../../public/images/e-shop-4.png"
+import EShop5 from "../../public/images/e-shop-5.png"
 
 
 
@@ -89,7 +94,17 @@ export const portfolios = [
         category: 5,
         liveLink: "https://sakib-modern-image-gallery.netlify.app/",
         sourceCodeLink: "https://github.com/mdsakibhossen/html-css-js-projects/tree/main/04-image-gallery"
-    }
+    },
+    {
+        id: 6,
+        images: [EShop1, EShop2, EShop3, EShop4, EShop5],
+        title: "EShop (E-commerce Website)",
+        description: "A responsive e-commerce platform with a modern design and shopping cart functionality.",
+        skills: ["HTML", "CSS", "JS"],
+        category: 5,
+        liveLink: "https://sakib-e-shop.netlify.app/",
+        sourceCodeLink: "https://github.com/mdsakibhossen/html-css-bs-tc-js-websites/tree/main/e-shop"
+    },
 
     // {
     //     id: 2222,
