@@ -16,6 +16,7 @@ import EShop2 from "../../public/images/e-shop-2.png"
 import EShop3 from "../../public/images/e-shop-3.png"
 import EShop4 from "../../public/images/e-shop-4.png"
 import EShop5 from "../../public/images/e-shop-5.png"
+import HexColorGen from "../../public/images/hex-color-gen.png"
 
 
 
@@ -101,9 +102,19 @@ export const portfolios = [
         title: "EShop (E-commerce Website)",
         description: "A responsive e-commerce platform with a modern design and shopping cart functionality.",
         skills: ["HTML", "CSS", "JS"],
-        category: 5,
+        category: 3,
         liveLink: "https://sakib-e-shop.netlify.app/",
         sourceCodeLink: "https://github.com/mdsakibhossen/html-css-bs-tc-js-websites/tree/main/e-shop"
+    },
+    {
+        id: 7,
+        images: [HexColorGen],
+        title: "Hex Color Generator",
+        description: "A simple tool to generate random hex color codes, built for designers needing quick color code.",
+        skills: ["HTML", "CSS", "JS"],
+        category: 5,
+        liveLink: "https://sakib-color-code-generator.netlify.app/",
+        sourceCodeLink: "https://github.com/mdsakibhossen/html-css-js-projects/tree/main/03-hex-color-code-generator"
     },
 
     // {
