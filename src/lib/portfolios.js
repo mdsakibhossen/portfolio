@@ -17,6 +17,7 @@ import EShop3 from "../../public/images/e-shop-3.png"
 import EShop4 from "../../public/images/e-shop-4.png"
 import EShop5 from "../../public/images/e-shop-5.png"
 import HexColorGen from "../../public/images/hex-color-gen.png"
+import ColorPalette from "../../public/images/color-palette.png"
 
 
 
@@ -115,6 +116,16 @@ export const portfolios = [
         category: 5,
         liveLink: "https://sakib-color-code-generator.netlify.app/",
         sourceCodeLink: "https://github.com/mdsakibhossen/html-css-js-projects/tree/main/03-hex-color-code-generator"
+    },
+    {
+        id: 8,
+        images: [ColorPalette],
+        title: "Color Palette",
+        description: "An intuitive tool for exploring colors, perfect for design and quick access to hex codes.",
+        skills: ["HTML", "CSS", "JS"],
+        category: 5,
+        liveLink: "https://sakib-flat-ui-color-palette-clone.netlify.app/",
+        sourceCodeLink: "https://github.com/mdsakibhossen/html-css-js-projects/tree/main/10-flat-ui-color-palette"
     },
 
     // {
